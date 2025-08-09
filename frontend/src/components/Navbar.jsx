@@ -72,19 +72,23 @@ const Navbar = () => {
             <img onClick={()=>setVisible(true)} src={assets.menu_icon} className='w-5 cursor-pointer sm:hidden' alt="" /> 
       </div>
 
-        {/* Sidebar menu for small screens */}
-        <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`}>
-                <div className='flex flex-col text-gray-600'>
-                    <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer'>
-                        <img className='h-4 rotate-180' src={assets.dropdown_icon} alt="" />
-                        <p>Back</p>
-                    </div>
-                    <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/'>HOME</NavLink>
-                    <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/collection'>COLLECTION</NavLink>
-                    <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/about'>ABOUT</NavLink>
-                    <NavLink onClick={()=>setVisible(false)} className='py-2 pl-6 border' to='/contact'>CONTACT</NavLink>
-                </div>
-        </div>
+
+        {/* Sidebar menu for small screens (fixed, full screen, scrollable, with backdrop) */}
+        {visible && (
+          <>
+            <div className="fixed inset-0 z-40 bg-black/40 transition-opacity duration-300" onClick={()=>setVisible(false)}></div>
+            <div className="fixed top-0 right-0 bottom-0 left-0 z-50 bg-white flex flex-col text-gray-600 overflow-y-auto transition-all duration-300">
+              <div onClick={()=>setVisible(false)} className='flex items-center gap-4 p-3 cursor-pointer border-b'>
+                <img className='h-4 rotate-180' src={assets.dropdown_icon} alt="" />
+                <p>Back</p>
+              </div>
+              <NavLink onClick={()=>setVisible(false)} className='py-4 pl-8 border-b text-lg' to='/'>HOME</NavLink>
+              <NavLink onClick={()=>setVisible(false)} className='py-4 pl-8 border-b text-lg' to='/collection'>COLLECTION</NavLink>
+              <NavLink onClick={()=>setVisible(false)} className='py-4 pl-8 border-b text-lg' to='/about'>ABOUT</NavLink>
+              <NavLink onClick={()=>setVisible(false)} className='py-4 pl-8 border-b text-lg' to='/contact'>CONTACT</NavLink>
+            </div>
+          </>
+        )}
 
     </div>
   )
