@@ -153,11 +153,20 @@ const Product = () => {
               <p className='pl-2'>(122)</p>
           </div>
           <div className='mt-5 flex items-center gap-4'>
-            <p className='text-3xl font-medium'>{currency}{productData.price}</p>
-            {productData.discount && (
-              <span className='bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-semibold'>
-                {productData.discount}% OFF
-              </span>
+            {productData.discount && productData.discount > 0 ? (
+              <>
+                <p className='text-2xl font-semibold text-gray-400 line-through'>
+                  {currency}{productData.price}
+                </p>
+                <p className='text-3xl font-bold text-black'>
+                  {currency}{Math.round(productData.price - (productData.price * productData.discount / 100))}
+                </p>
+                <span className='bg-green-100 text-green-700 px-2 py-1 rounded text-sm font-semibold'>
+                  {productData.discount}% OFF
+                </span>
+              </>
+            ) : (
+              <p className='text-3xl font-medium'>{currency}{productData.price}</p>
             )}
           </div>
           {/* For Rent card removed as requested */}
