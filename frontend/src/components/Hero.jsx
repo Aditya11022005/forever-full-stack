@@ -59,7 +59,7 @@ const Hero = () => {
             SHOP NOW
           </button>
           <a
-            href="https://wa.me/919322465522?text=I%20want%20to%20rent%20a%20product%20from%20Aruzz%20Clothing."
+            href="https://wa.me/919561680380?text=I%20want%20to%20rent%20a%20product%20from%20Aruzz%20Clothing."
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-xs px-3 py-1 rounded-full bg-gray-800 text-white shadow-lg hover:bg-gray-600 transition-all duration-200 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-400 flex items-center gap-1"
@@ -68,7 +68,7 @@ const Hero = () => {
             Rent Now
           </a>
           <a
-            href="https://wa.me/919999999999?text=I%20want%20to%20book%20an%20appointment%20with%20Aruzz%20Clothing."
+            href="https://wa.me/919561680380?text=I%20want%20to%20book%20an%20appointment%20with%20Aruzz%20Clothing."
             target="_blank"
             rel="noopener noreferrer"
             className="font-semibold text-xs px-3 py-1 rounded-full bg-gray-700 text-white shadow-lg hover:bg-gray-500 transition-all duration-200 active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-400 flex items-center gap-1"
