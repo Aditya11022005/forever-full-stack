@@ -184,7 +184,7 @@ const Collection = () => {
           {
             filterProducts.map((item,index)=>(
               <div key={index} className="rounded-xl shadow hover:shadow-lg transition-shadow duration-200 p-3 flex flex-col items-center">
-                <ProductItem name={item.name} id={item._id} price={item.price} image={item.image} />
+                <ProductItem name={item.name} id={item._id} price={item.price} image={item.image} discount={item.discount} />
               </div>
             ))
           }
